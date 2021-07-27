@@ -1,0 +1,141 @@
+.contact {
+    height: 100%;
+    padding-top: 40vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    h2 {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+  
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 2rem;
+      font-size: 1.5rem;
+    }
+  
+    .social-icons {
+      position: initial;
+      margin-top: 2rem;
+    }
+
+    .mail:hover {
+      color: rgb(252, 32, 32)
+    }
+    .linked:hover {
+      color: rgb(25, 67, 158)
+    }
+    .github:hover {
+      color: rgb(143, 136, 136)
+    }
+
+  }
+
+.nail {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: black;
+    box-shadow: 2px 2px 2px 0px rgb(200, 200, 200);
+    position: absolute;
+    top: 100px;
+    left: 27%;
+    z-index: 1000;
+}
+
+.falling-banner {
+    color: white;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 40%;
+    height: 200px;
+    animation: fallingBanner 5s 1;
+    -webkit-animation: fallingBanner 1s 1;
+}
+
+.strin {
+    display: block;
+    width: 10%;
+    height: 10%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border: 2px solid rgba(221, 187, 127, 1);
+    margin: auto;
+    border-bottom: none;
+}
+
+.perspective-container {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(210, 210, 210);
+    border-radius: 10px;
+    perspective: 400px;
+}
+
+.vibrating-box {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(221, 187, 127, 1);
+    color: white;
+    border-radius: 10px;
+    transform: rotateX(0deg);
+    transform-origin: top;
+    animation: vibratingBox 2s 1;
+    animation-delay: 1s;
+    box-shadow: 5px 5px 5px 0px rgba(210, 210, 210, 0.5);
+}
+.message-box {
+    width: 95%;
+    height: 92%;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+    border-radius: 10px;
+    background-color: rgba(221, 187, 127, 1);
+    color: rgb(126, 0, 59);
+    font-family: "Dancing Script", cursive;
+    margin-top: 5px;
+}
+
+@-webkit-keyframes fallingBanner {
+    0% {
+        top: -300px;
+        animation-timing-function: ease-in;
+    }
+    100% {
+        top: 100px;
+    }
+}
+
+@-webkit-keyframes vibratingBox {
+    0% {
+        transform: rotateX(50deg);
+    }
+    12.5% {
+        transform: rotateX(0deg);
+    }
+    25% {
+        transform: rotateX(37.5deg);
+    }
+    37.5% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(28.125deg);
+    }
+    62.5% {
+        transform: rotateX(0deg);
+    }
+    75% {
+        transform: rotateX(21deg);
+        animation-timing-function: ease-in;
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
